@@ -1,37 +1,16 @@
-## Welcome to GitHub Pages
+## Trial & Error In Startup Minigui
 
-You can use the [editor on GitHub](https://github.com/ariesduanmu/minigui/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+I tried to compile minigui 1.6.0 and 5.0 in my ubuntu20(x86_64) all failed.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Finally succeed in configure the development environment under Ubuntu16(x86) in virtual box with minigui 3.2
 
-### Markdown
+with help of [this](https://www.programmersought.com/article/192818300/) had a good begin
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+* `$ wget -qO - http://files.fmsoft.cn/ubuntu/key/fmsoft.gpg | sudo apt-key add -`
+* `deb http://files.fmsoft.cn/ubuntu/ xenial restricted`
+* `$ sudo apt update`
+* `$ sudo apt install libminigui-ths-dev`
 
-```markdown
-Syntax highlighted code block
+`$ sudo apt install libminigui-procs-dev` not work for me, so I tried to compile [minigui 3.2](https://github.com/VincentWei/build-minigui-3.2) myself
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ariesduanmu/minigui/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+[steps](https://github.com/VincentWei/build-minigui-3.2#steps) int README is detail enough to lead you to success.
